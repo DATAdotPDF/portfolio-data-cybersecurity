@@ -189,6 +189,30 @@ a {
   padding-top: clamp(7rem, 11vw, 9rem);
 }
 
+.profile-banner {
+  position: relative;
+  margin: 0 0 clamp(2.5rem, 5vw, 4.5rem);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.24);
+}
+
+.profile-banner::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  border: 1px solid rgba(25, 249, 255, 0.12);
+  background: linear-gradient(90deg, transparent 55%, rgba(168, 85, 247, 0.08));
+  pointer-events: none;
+}
+
+.profile-banner img {
+  width: 100%;
+  aspect-ratio: 4 / 1;
+  object-fit: cover;
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.55fr);
@@ -293,7 +317,7 @@ a {
 .hero-visual {
   position: relative;
   justify-self: end;
-  width: min(100%, 276px);
+  width: min(100%, 224px);
 }
 
 .portrait-frame {
@@ -324,6 +348,16 @@ a {
   filter: saturate(0.85) contrast(1.04);
 }
 
+.portrait-frame--avatar img {
+  aspect-ratio: 1;
+  object-position: center;
+}
+
+.portrait-frame--photo img {
+  aspect-ratio: 4 / 5;
+  object-position: center 18%;
+}
+
 .portrait-frame .corner {
   position: absolute;
   z-index: 2;
@@ -343,15 +377,6 @@ a {
   bottom: -1px;
   background: var(--violet) !important;
   box-shadow: 0 0 12px var(--violet) !important;
-}
-
-.visual-caption {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-  color: var(--muted);
-  font: 500 0.62rem/1 var(--font-mono);
-  letter-spacing: 0.12em;
 }
 
 .hero-metrics {
@@ -580,6 +605,15 @@ a {
   white-space: nowrap;
 }
 
+.all-projects-link {
+  display: inline-flex;
+  margin-top: 2rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--cyan);
+  color: var(--cyan);
+  font: 500 0.78rem/1.4 var(--font-mono);
+}
+
 .contact {
   width: min(1280px, 94vw);
   padding-inline: clamp(1.5rem, 5vw, 5rem);
@@ -592,9 +626,9 @@ a {
 
 .contact-layout {
   display: grid;
-  grid-template-columns: 1fr 0.45fr;
-  gap: 4rem;
-  align-items: end;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 0.4fr) 210px;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
 }
 
 .contact-links {
@@ -612,6 +646,21 @@ a {
 .contact-links a:hover {
   padding-left: 0.7rem;
   color: var(--cyan);
+}
+
+.contact-portrait {
+  width: min(100%, 210px);
+  margin: 0;
+  justify-self: end;
+}
+
+.contact-portrait figcaption {
+  margin-top: 0.75rem;
+  color: var(--muted);
+  font: 500 0.65rem/1.4 var(--font-mono);
+  letter-spacing: 0.08em;
+  text-align: right;
+  text-transform: uppercase;
 }
 
 .site-footer {
@@ -681,7 +730,7 @@ a {
   .hero-visual {
     order: 2;
     justify-self: start;
-    width: min(260px, 68vw);
+    width: min(210px, 58vw);
   }
 
   .hero-metrics,
@@ -705,6 +754,14 @@ a {
   .contact-layout {
     gap: 2.5rem;
   }
+
+  .contact-portrait {
+    justify-self: start;
+  }
+
+  .contact-portrait figcaption {
+    text-align: left;
+  }
 }
 
 @media (max-width: 620px) {
@@ -721,12 +778,31 @@ a {
     padding-top: 7rem;
   }
 
+  .profile-banner {
+    margin-bottom: 3rem;
+  }
+
+  .profile-banner img {
+    height: auto;
+    object-fit: contain;
+  }
+
   .hero h1 {
     font-size: clamp(3.2rem, 17vw, 5.2rem);
   }
 
   .hero-visual {
-    width: min(220px, 62vw);
+    width: min(184px, 54vw);
+  }
+
+  .hero-metrics div {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero-metrics strong {
+    font-size: 1.9rem;
   }
 
   .hero-actions {

@@ -15,7 +15,7 @@
 <p align="left">
   Personal portfolio and case study built with semantic HTML, modern CSS and vanilla JavaScript.<br><br>
   The project presents my work in Data Engineering, Analytics, BI, Data Operations and Cybersecurity. It documents selected projects, professional experience and current studies at Senac.<br><br>
-  The interface uses a graphite cyberpunk visual system with restrained cyan and violet accents. The portrait is an original AI-assisted illustration based on my own photo. The source photo is not included in the repository.<br><br>
+  The interface uses a graphite cyberpunk visual system with restrained cyan and violet accents. The opening uses my LinkedIn banner and avatar. My original photo appears in the final contact section.<br><br>
   The goal is to keep the site fast, readable and easy to deploy without frameworks or runtime dependencies.
 </p>
 
@@ -47,7 +47,8 @@
 - LinkedIn, GitHub and WhatsApp contact paths
 - Motion with reduced-motion support
 - No frontend framework or package dependency
-- Original portfolio avatar without the source photo
+- One-page flow with anchor navigation and natural scrolling
+- LinkedIn visual identity and original contact photo
 
 ###
 
@@ -56,7 +57,9 @@
 ```text
 portfolio-pedro/
 ├── assets/
-│   ├── pedro-cybersecurity-avatar.png
+│   ├── linkedin-banner.jpg
+│   ├── pedro-ferreira.jpg
+│   ├── profile-avatar.png
 │   └── portfolio-banner.png
 ├── .gitignore
 ├── index.html
@@ -81,7 +84,7 @@ Open `http://localhost:4173` from the project directory.
 - No API keys, access tokens or passwords are required
 - Local environment files and private key formats are ignored by Git
 - The public WhatsApp link is intentional and used as the contact channel
-- The original personal photo is excluded from version control
+- The LinkedIn banner, public avatar and contact photo are intentional public assets
 
 ###
 

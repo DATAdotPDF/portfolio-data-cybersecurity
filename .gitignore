@@ -8,10 +8,6 @@
 *.pfx
 *.jks
 
-# Private source images
-assets/pedro-ferreira.jpg
-assets/profile-avatar.png
-
 # Dependencies and build output
 node_modules/
 dist/
