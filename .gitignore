@@ -1,0 +1,31 @@
+# Environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+
+# Private source images
+assets/pedro-ferreira.jpg
+assets/profile-avatar.png
+
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+qa/
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
