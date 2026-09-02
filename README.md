@@ -21,6 +21,17 @@
 
 ###
 
+<h3 align="left">CURRENT PROFILE:</h3>
+
+###
+
+- 12+ years of professional experience
+- 10+ public projects on GitHub
+- 1 year and 2 months at CEPA Mobility Brazil after the transition to data
+- Data Engineering training at Escola DNC and current Cybersecurity studies at Senac
+
+###
+
 <h3 align="left">LANGUAGES AND TOOLS:</h3>
 
 ###
@@ -95,3 +106,4 @@ Open `http://localhost:4173` from the project directory.
   <a href="https://github.com/DATAdotPDF">GitHub</a> ·
   <a href="https://api.whatsapp.com/send/?phone=5521964094297&text&type=phone_number&app_absent=0">WhatsApp</a>
 </p>
+
