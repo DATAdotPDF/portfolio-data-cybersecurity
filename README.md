@@ -90,6 +90,14 @@ Open `http://localhost:4173` from the project directory.
 
 ###
 
+<h3 align="left">LIVE SITE:</h3>
+
+<p align="left">
+  <a href="https://portfolio-data-cybersecurity.data-pedutraferreira.workers.dev/">Open the live portfolio on Cloudflare</a>
+</p>
+
+###
+
 <h3 align="left">SECURITY AND PRIVACY:</h3>
 
 - No API keys, access tokens or passwords are required
